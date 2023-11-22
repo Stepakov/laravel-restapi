@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\ArticlesController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,4 @@ Route::put( 'articles/{id}', [ ArticlesController::class, 'update' ] );
 Route::patch( 'articles/{id}', [ ArticlesController::class, 'updatePatch' ] );
 Route::delete( 'articles/{id}', [ ArticlesController::class, 'destroy' ] );
 
-
+Route::apiResource( 'posts', PostsController::class );
